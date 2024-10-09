@@ -1,0 +1,34 @@
+@keyframes check-fill {
+    0% {
+        stroke-width: 0;
+        
+    }
+
+    50% {
+        
+        stroke-width: 80px;
+    }
+
+    100% {
+        
+        stroke-width: 50px;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;   
+}
+
+#Circle {
+    stroke: red !important;
+}
+
+#Check {
+
+    animation: check-fill 1.5s ease-in;
+}
