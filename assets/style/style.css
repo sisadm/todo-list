@@ -1,3 +1,9 @@
+:root {
+    --color-pinky: #fbe3e8;
+    --color-blueGreeny: #5cbdb9;
+    --color-teenyGreeny: #ebf6f5;
+}
+
 @keyframes check-fill {
     0% {
         stroke-width: 0;
@@ -15,6 +21,13 @@
     }
 }
 
+@keyframes circle-fill {
+    to {
+        stroke-dashoffset: 0;
+    }
+    
+}
+
 
 * {
     box-sizing: border-box;
@@ -26,6 +39,9 @@
 
 #Circle {
     stroke: red !important;
+    stroke-dashoffset: 2100;
+    stroke-dasharray: 2100;
+    animation: circle-fill 1.5s linear forwards;
 }
 
 #Check {
