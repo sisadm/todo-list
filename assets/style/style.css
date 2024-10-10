@@ -1,3 +1,7 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Protest+Strike&display=swap');
+
 /* varibales */
 :root {
     --color-pinky: #fbe3e8;
@@ -39,7 +43,8 @@
     margin: 0px;
     padding: 0px;
     list-style: none;
-    text-decoration: none;   
+    text-decoration: none;
+    font-family: "Merriweather", serif;   
 }
 
 /* html */
@@ -77,6 +82,8 @@ header {
 
 header h1 {
     margin: 1em;
+    font-family: "Protest Strike", sans-serif;
+
 }
 
 
@@ -146,7 +153,7 @@ li button {
     border: var(--color-blueGreeny) 2px solid;
     border-radius: 10px;
     background-color: var(--color-pinky);
-    
+    text-align: center;
 }
 
 /* hover/focus for add item and save */
