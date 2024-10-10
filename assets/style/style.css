@@ -1,9 +1,13 @@
+/* varibales */
 :root {
     --color-pinky: #fbe3e8;
+    --color-pinkyNight: #fe92a9;
     --color-blueGreeny: #5cbdb9;
     --color-teenyGreeny: #ebf6f5;
 }
 
+
+/* keyframes */
 @keyframes check-fill {
     0% {
         stroke-width: 0;
@@ -29,6 +33,7 @@
 }
 
 
+/* universal selector */
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -37,14 +42,88 @@
     text-decoration: none;   
 }
 
+/* html */
+
+html {
+    background-color: var(--color-teenyGreeny);
+}
+
+.bg-night {
+    background-color: #1F1B24;
+}
+
+/* main */
+#main {
+    width: 90%;
+    margin: 1em auto;
+    
+}
+
+#main svg {
+    vertical-align: middle;
+}
+
+#main span {
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+/* header */
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 1em;
+}
+
+
+/* input div */
+
+#inputDiv {
+    margin: 1em auto;
+    text-align: center;
+}
+
+/* svg */
+
 #Circle {
-    stroke: red !important;
+    stroke: var(--color-pinkyNight) !important;
     stroke-dashoffset: 2100;
     stroke-dasharray: 2100;
     animation: circle-fill 1.5s linear forwards;
 }
 
 #Check {
-
+    stroke: var(--color-blueGreeny) !important;
     animation: check-fill 1.5s ease-in;
+}
+
+/* list elements */
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 4em;
+    border-bottom: 3px solid var(--color-pinky);
+    border-radius: 10px;
+    margin: 1em 0;
+}
+
+li button {
+    margin: 0 5px;
+    background-color: var(--color-pinky);
+    border: 1px solid #222222;
+    border-radius: 8px;
+    color: var(--color-blueGreeny);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    padding: 3px;
 }
