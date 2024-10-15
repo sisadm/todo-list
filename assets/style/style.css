@@ -139,6 +139,8 @@ li {
     border-bottom: 3px solid var(--color-pinky);
     border-radius: 10px;
     margin: 1em 0;
+    transition: text-decoration 1s ease-in-out;
+    text-decoration: line-through;
 }
 
 li button {
