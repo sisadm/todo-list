@@ -157,11 +157,11 @@ header h1 {
 
 /* text */
 
-.spanText {
+.text {
     position: relative;
 }
 
-.spanText::before {
+.text::before {
     content: ' ';
     position: absolute;
     top: 50%;
@@ -169,7 +169,7 @@ header h1 {
     background-color: var(--color-pinky);
 }
 
-.checked + .spanText::before {
+.checked > .text::before {
     animation-name: lineThrough;
     animation-duration: 1.2s;
     animation-timing-function: linear;
@@ -192,6 +192,18 @@ li {
 
 li button {
     padding: 5px;   
+}
+
+
+/* list divs */
+
+.textDiv{
+    flex-grow: 5;
+}
+
+
+.btnDiv {
+    flex-grow: 0;
 }
 
 
