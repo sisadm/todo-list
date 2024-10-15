@@ -128,7 +128,7 @@ addItemButton.addEventListener('click', () => {
 // save button 
 saveButton.addEventListener('click', () => {
     const li = document.querySelectorAll('li');
-    const liSpan = document.querySelectorAll('.liSpan');
+    const liDiv = document.querySelectorAll('.textDiv');
     const hideLi = document.querySelectorAll('.hide');
     let savedItemArr = [];
 
@@ -136,13 +136,21 @@ saveButton.addEventListener('click', () => {
 
     if(hideLi.length == 0 && li.length > 0) {
 
+        
+
         // for loop list elements and push it to savedItemArr 
         for(let i = 0; i < li.length; i++){
-            if(liSpan[i].classList.contains('notchecked')) {
-                savedItemArr.push(liSpan[i].innerHTML);
-            }
+            
+            if(liDiv[i].classList.contains('notChecked')) {
+                
+                savedItemArr.push(liDiv[i].querySelector('.text').innerHTML);
+            }    
+            console.log(savedItemArr)
         // for loop savedItemArr and push each one into localStorage 
         }
+
+        
+
         for(let i = 0; i < savedItemArr.length; i++) {
             window.localStorage.setItem(i, savedItemArr[i]);
         }       
@@ -150,7 +158,7 @@ saveButton.addEventListener('click', () => {
 
 });
 
-// up & down & delete buttons
+// up & down & delete buttons & a
 listUl.addEventListener('click', (event) => {
     if(event.target.tagName == 'BUTTON') {  // target the buttons 
         if(event.target.className == 'delete') {  // target the button with delete class
@@ -176,10 +184,14 @@ listUl.addEventListener('click', (event) => {
         }
     }
 
+    
+    // event for adding checked class into li elements 
+
     if(event.target.classList.contains('textDiv') || 
         event.target.className =='text' ||
         event.target.tagName =='svg' ) {
-            console.log('asdfs')
+        
+
         if (event.target.classList.contains('textDiv')) {
             console.log('div')
             if(event.target.classList.contains('checked')) {
@@ -197,14 +209,24 @@ listUl.addEventListener('click', (event) => {
             if(event.target.parentNode.classList.contains('checked')){
                 event.target.parentNode.classList.replace('checked', 'notChecked');
             }
-                
              
             else {
             event.target.parentNode.classList.replace('notChecked', 'checked');
             console.log('b')
             }     
         }
+
+        if (event.target.tagName =='svg') {
+        if(event.target.parentNode.parentNode.classList.contains('checked')){
+            event.target.parentNode.parentNode.classList.replace('checked', 'notChecked');
+        }
+         
+        else {
+        event.target.parentNode.parentNode.classList.replace('notChecked', 'checked');
+        console.log('b')
+        }     
     }
+        }
 })
 
 
